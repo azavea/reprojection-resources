@@ -1,0 +1,63 @@
+#!/bin/bash
+rm -r _output/
+mkdir _output _output/us _output/global _output/mbtiles
+
+# Convert shapefiles to geojson
+mapshaper -i input/us/ne_10m_populated_places_simple/ne_10m_populated_places_simple.shp \
+  -o _output/us/us_places.geojson format=geojson
+mapshaper -i input/us/tl_2019_us_county/tl_2019_us_county.shp \
+  -filter-fields GEOID \
+  -o _output/us/us_county.geojson format=geojson
+mapshaper -i input/us/tl_2019_us_state/tl_2019_us_state.shp \
+  -filter-fields GEOID \
+  -o _output/us/us_state.geojson format=geojson
+
+geojson-polygon-labels _output/us/us_county.geojson > _output/us/us_county_labels.geojson
+
+# Reproject coordinates to look like other projections
+cat _output/us/us_places.geojson | dirty-reproject --forward albersUsa > _output/us/us_places_albersusa.geojson
+cat _output/us/us_county_labels.geojson | dirty-reproject --forward albersUsa > _output/us/us_county_albersusa.geojson
+cat _output/us/us_state.geojson | dirty-reproject --forward albersUsa > _output/us/us_state_albersusa.geojson
+
+# Convert reprojected geojson to mbtiles
+tippecanoe -o _output/mbtiles/us_places_albersusa.mbtiles \
+  --no-tile-size-limit \
+  --no-tile-compression \
+  --maximum-zoom=8 \
+  --minimum-zoom=2 \
+  -r1 \
+  _output/us/us_places_albersusa.geojson
+
+tippecanoe -o _output/mbtiles/us_county_albersusa.mbtiles \
+  --no-tile-size-limit \
+  --no-tile-compression  \
+  --simplification=15 \
+  --generate-ids \
+  --use-attribute-for-id=GEOID \
+  --convert-stringified-ids-to-numbers \
+  --detect-shared-borders \
+  --maximum-zoom=8 \
+  --minimum-zoom=2 \
+  --simplify-only-low-zooms \
+  --no-tiny-polygon-reduction \
+  -r1 \
+  _output/us/us_county_albersusa.geojson
+
+tippecanoe -o _output/mbtiles/us_state_albersusa.mbtiles \
+  --no-tile-size-limit \
+  --no-tile-compression \
+  --simplification=15 \
+  --detect-shared-borders \
+  --maximum-zoom=8 \
+  --minimum-zoom=2 \
+  --simplify-only-low-zooms \
+  --no-tiny-polygon-reduction \
+  _output/us/us_state_albersusa.geojson
+
+# Merge multiple mbtiles into one
+tile-join -o _output/mbtiles/combined.mbtiles \
+  --no-tile-size-limit \
+  --no-tile-compression \
+  _output/mbtiles/us_places_albersusa.mbtiles _output/mbtiles/us_county_albersusa.mbtiles _output/mbtiles/us_state_albersusa.mbtiles
+
+mb-util --image_format=pbf _output/mbtiles/combined.mbtiles _output/tiles
