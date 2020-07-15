@@ -1,0 +1,101 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Alabama","fips":"01","abbr":"AL","short":"Ala."},"geometry":{"type":"Point","coordinates":[8.183469965520883,-5.766067324710721]},"bbox":[8.183469965520883,-5.766067324710721,8.183469965520883,-5.766067324710721]}
+,
+{"type":"Feature","properties":{"name":"Alaska","fips":"02","abbr":"AK","short":"Alaska"},"geometry":{"type":"Point","coordinates":[-17.408190043414162,-9.103656704217766]},"bbox":[-17.408190043414162,-9.103656704217766,-17.408190043414162,-9.103656704217766]}
+,
+{"type":"Feature","properties":{"name":"Arizona","fips":"04","abbr":"AZ","short":"Ariz."},"geometry":{"type":"Point","coordinates":[-12.233102720744633,-3.2399716998498644]},"bbox":[-12.233102720744633,-3.2399716998498644,-12.233102720744633,-3.2399716998498644]}
+,
+{"type":"Feature","properties":{"name":"Arkansas","fips":"05","abbr":"AR","short":"Ark."},"geometry":{"type":"Point","coordinates":[3.195868687976427,-3.93162089874467]},"bbox":[3.195868687976427,-3.93162089874467,3.195868687976427,-3.93162089874467]}
+,
+{"type":"Feature","properties":{"name":"California","fips":"06","abbr":"CA","short":"Calif."},"geometry":{"type":"Point","coordinates":[-18.94272046573708,4.054749851650679]},"bbox":[-18.94272046573708,4.054749851650679,-18.94272046573708,4.054749851650679]}
+,
+{"type":"Feature","properties":{"name":"Colorado","fips":"08","abbr":"CO","short":"Colo."},"geometry":{"type":"Point","coordinates":[-7.760210746033628,0.762550610135522]},"bbox":[-7.760210746033628,0.762550610135522,-7.760210746033628,0.762550610135522]}
+,
+{"type":"Feature","properties":{"name":"Connecticut","fips":"09","abbr":"CT","short":"Conn."},"geometry":{"type":"Point","coordinates":[17.27155432758478,4.9921519113983015]},"bbox":[17.27155432758478,4.9921519113983015,17.27155432758478,4.9921519113983015]}
+,
+{"type":"Feature","properties":{"name":"Delaware","fips":"10","abbr":"DE","short":"Del."},"geometry":{"type":"Point","coordinates":[16.216158469877016,1.7151844861637977]},"bbox":[16.216158469877016,1.7151844861637977,16.216158469877016,1.7151844861637977]}
+,
+{"type":"Feature","properties":{"name":"District of Columbia Federal district","fips":"11","abbr":"DC","short":"D.C."},"geometry":{"type":"Point","coordinates":[15.017320853511908,1.653195990655317]},"bbox":[15.017320853511908,1.653195990655317,15.017320853511908,1.653195990655317]}
+,
+{"type":"Feature","properties":{"name":"Florida","fips":"12","abbr":"FL","short":"Fla."},"geometry":{"type":"Point","coordinates":[13.361103193778112,-10.03032195827069]},"bbox":[13.361103193778112,-10.03032195827069,13.361103193778112,-10.03032195827069]}
+,
+{"type":"Feature","properties":{"name":"Georgia","fips":"13","abbr":"GA","short":"Ga."},"geometry":{"type":"Point","coordinates":[11.17135475523674,-5.731131443324763]},"bbox":[11.17135475523674,-5.731131443324763,11.17135475523674,-5.731131443324763]}
+,
+{"type":"Feature","properties":{"name":"Hawaii","fips":"15","abbr":"HI","short":"Hawaii"},"geometry":{"type":"Point","coordinates":[-7.513756472584844,-12.318672732653722]},"bbox":[-7.513756472584844,-12.318672732653722,-7.513756472584844,-12.318672732653722]}
+,
+{"type":"Feature","properties":{"name":"Idaho","fips":"16","abbr":"ID","short":"Idaho"},"geometry":{"type":"Point","coordinates":[-13.17890420807188,6.512277910938708]},"bbox":[-13.17890420807188,6.512277910938708,-13.17890420807188,6.512277910938708]}
+,
+{"type":"Feature","properties":{"name":"Illinois","fips":"17","abbr":"IL","short":"Ill."},"geometry":{"type":"Point","coordinates":[5.576818778211479,1.7975116291238764]},"bbox":[5.576818778211479,1.7975116291238764,5.576818778211479,1.7975116291238764]}
+,
+{"type":"Feature","properties":{"name":"Indiana","fips":"18","abbr":"IN","short":"Ind."},"geometry":{"type":"Point","coordinates":[7.884757500803586,1.9839547577365204]},"bbox":[7.884757500803586,1.9839547577365204,7.884757500803586,1.9839547577365204]}
+,
+{"type":"Feature","properties":{"name":"Iowa","fips":"19","abbr":"IA","short":"Iowa"},"geometry":{"type":"Point","coordinates":[1.5443826079813734,3.3696717859626846]},"bbox":[1.5443826079813734,3.3696717859626846,1.5443826079813734,3.3696717859626846]}
+,
+{"type":"Feature","properties":{"name":"Kansas","fips":"20","abbr":"KS","short":"Kans."},"geometry":{"type":"Point","coordinates":[-1.238997559538239,-0.1834395721609602]},"bbox":[-1.238997559538239,-0.1834395721609602,-1.238997559538239,-0.1834395721609602]}
+,
+{"type":"Feature","properties":{"name":"Kentucky","fips":"21","abbr":"KY","short":"Ky."},"geometry":{"type":"Point","coordinates":[9.46875863763535,-0.44834449842794444]},"bbox":[9.46875863763535,-0.44834449842794444,9.46875863763535,-0.44834449842794444]}
+,
+{"type":"Feature","properties":{"name":"Louisiana","fips":"22","abbr":"LA","short":"La."},"geometry":{"type":"Point","coordinates":[3.3172564238160724,-6.812561869797518]},"bbox":[3.3172564238160724,-6.812561869797518,3.3172564238160724,-6.812561869797518]}
+,
+{"type":"Feature","properties":{"name":"Maine","fips":"23","abbr":"ME","short":"Maine"},"geometry":{"type":"Point","coordinates":[19.04616902943555,9.67227485468567]},"bbox":[19.04616902943555,9.67227485468567,19.04616902943555,9.67227485468567]}
+,
+{"type":"Feature","properties":{"name":"Maryland","fips":"24","abbr":"MD","short":"Md."},"geometry":{"type":"Point","coordinates":[14.9627168593101,2.114307046909801]},"bbox":[14.9627168593101,2.114307046909801,14.9627168593101,2.114307046909801]}
+,
+{"type":"Feature","properties":{"name":"Massachusetts","fips":"25","abbr":"MA","short":"Mass."},"geometry":{"type":"Point","coordinates":[17.171677938846358,5.741183680026961]},"bbox":[17.171677938846358,5.741183680026961,17.171677938846358,5.741183680026961]}
+,
+{"type":"Feature","properties":{"name":"Michigan","fips":"26","abbr":"MI","short":"Mich."},"geometry":{"type":"Point","coordinates":[8.467050620912158,4.801849174526745]},"bbox":[8.467050620912158,4.801849174526745,8.467050620912158,4.801849174526745]}
+,
+{"type":"Feature","properties":{"name":"Minnesota","fips":"27","abbr":"MN","short":"Minn."},"geometry":{"type":"Point","coordinates":[1.4098457249469893,8.004584258622423]},"bbox":[1.4098457249469893,8.004584258622423,1.4098457249469893,8.004584258622423]}
+,
+{"type":"Feature","properties":{"name":"Mississippi","fips":"28","abbr":"MS","short":"Miss."},"geometry":{"type":"Point","coordinates":[5.705828491192992,-5.205175670683705]},"bbox":[5.705828491192992,-5.205175670683705,5.705828491192992,-5.205175670683705]}
+,
+{"type":"Feature","properties":{"name":"Missouri","fips":"29","abbr":"MO","short":"Mo."},"geometry":{"type":"Point","coordinates":[3.0116539172492005,-0.2650024116982665]},"bbox":[3.0116539172492005,-0.2650024116982665,3.0116539172492005,-0.2650024116982665]}
+,
+{"type":"Feature","properties":{"name":"Montana","fips":"30","abbr":"MT","short":"Mont."},"geometry":{"type":"Point","coordinates":[-10.529541198720858,9.098898606531574]},"bbox":[-10.529541198720858,9.098898606531574,-10.529541198720858,9.098898606531574]}
+,
+{"type":"Feature","properties":{"name":"Nebraska","fips":"31","abbr":"NE","short":"Nebr."},"geometry":{"type":"Point","coordinates":[-2.5952921648402816,2.888829582348022]},"bbox":[-2.5952921648402816,2.888829582348022,-2.5952921648402816,2.888829582348022]}
+,
+{"type":"Feature","properties":{"name":"Nevada","fips":"32","abbr":"NV","short":"Nev."},"geometry":{"type":"Point","coordinates":[-15.081141423416748,2.528265515350293]},"bbox":[-15.081141423416748,2.528265515350293,-15.081141423416748,2.528265515350293]}
+,
+{"type":"Feature","properties":{"name":"New Hampshire","fips":"33","abbr":"NH","short":"N.H."},"geometry":{"type":"Point","coordinates":[17.876952132781874,6.938726574495668]},"bbox":[17.876952132781874,6.938726574495668,17.876952132781874,6.938726574495668]}
+,
+{"type":"Feature","properties":{"name":"New Jersey","fips":"34","abbr":"NJ","short":"N.J."},"geometry":{"type":"Point","coordinates":[16.38112727082974,3.9371559148668034]},"bbox":[16.38112727082974,3.9371559148668034,16.38112727082974,3.9371559148668034]}
+,
+{"type":"Feature","properties":{"name":"New Mexico","fips":"35","abbr":"NM","short":"N.M."},"geometry":{"type":"Point","coordinates":[-7.350134978005091,-3.845568393355275]},"bbox":[-7.350134978005091,-3.845568393355275,-7.350134978005091,-3.845568393355275]}
+,
+{"type":"Feature","properties":{"name":"New York","fips":"36","abbr":"NY","short":"N.Y."},"geometry":{"type":"Point","coordinates":[15.675765233611548,6.330030470525171]},"bbox":[15.675765233611548,6.330030470525171,15.675765233611548,6.330030470525171]}
+,
+{"type":"Feature","properties":{"name":"North Dakota","fips":"38","abbr":"ND","short":"N.D."},"geometry":{"type":"Point","coordinates":[-1.2518045846251171,8.79239453347772]},"bbox":[-1.2518045846251171,8.79239453347772,-1.2518045846251171,8.79239453347772]}
+,
+{"type":"Feature","properties":{"name":"Ohio","fips":"39","abbr":"OH","short":"Ohio"},"geometry":{"type":"Point","coordinates":[9.978436536497748,2.0357744951813292]},"bbox":[9.978436536497748,2.0357744951813292,9.978436536497748,2.0357744951813292]}
+,
+{"type":"Feature","properties":{"name":"Oklahoma","fips":"40","abbr":"OK","short":"Okla."},"geometry":{"type":"Point","coordinates":[0.2791241802796992,-3.3030999525506957]},"bbox":[0.2791241802796992,-3.3030999525506957,0.2791241802796992,-3.3030999525506957]}
+,
+{"type":"Feature","properties":{"name":"Oregon","fips":"41","abbr":"OR","short":"Ore."},"geometry":{"type":"Point","coordinates":[-15.982726351164935,7.290934892561549]},"bbox":[-15.982726351164935,7.290934892561549,-15.982726351164935,7.290934892561549]}
+,
+{"type":"Feature","properties":{"name":"Pennsylvania","fips":"42","abbr":"PA","short":"Penn."},"geometry":{"type":"Point","coordinates":[14.697494203950745,3.6126909167897265]},"bbox":[14.697494203950745,3.6126909167897265,14.697494203950745,3.6126909167897265]}
+,
+{"type":"Feature","properties":{"name":"Rhode Island","fips":"44","abbr":"RI","short":"R.I."},"geometry":{"type":"Point","coordinates":[18.320156960767573,5.439513618620558]},"bbox":[18.320156960767573,5.439513618620558,18.320156960767573,5.439513618620558]}
+,
+{"type":"Feature","properties":{"name":"South Carolina","fips":"45","abbr":"SC","short":"S.C."},"geometry":{"type":"Point","coordinates":[13.136145384231614,-4.023957317443493]},"bbox":[13.136145384231614,-4.023957317443493,13.136145384231614,-4.023957317443493]}
+,
+{"type":"Feature","properties":{"name":"South Dakota","fips":"46","abbr":"SD","short":"S.D."},"geometry":{"type":"Point","coordinates":[-0.9383753596426024,5.763978305362857]},"bbox":[-0.9383753596426024,5.763978305362857,-0.9383753596426024,5.763978305362857]}
+,
+{"type":"Feature","properties":{"name":"Tennessee","fips":"47","abbr":"TN","short":"Tenn."},"geometry":{"type":"Point","coordinates":[8.179881706066165,-2.517023369050312]},"bbox":[8.179881706066165,-2.517023369050312,8.179881706066165,-2.517023369050312]}
+,
+{"type":"Feature","properties":{"name":"Texas","fips":"48","abbr":"TX","short":"Tex."},"geometry":{"type":"Point","coordinates":[-1.5837680229529232,-7.755462259443414]},"bbox":[-1.5837680229529232,-7.755462259443414,-1.5837680229529232,-7.755462259443414]}
+,
+{"type":"Feature","properties":{"name":"Utah","fips":"49","abbr":"UT","short":"Utah"},"geometry":{"type":"Point","coordinates":[-11.73772853845175,1.4293884002469526]},"bbox":[-11.73772853845175,1.4293884002469526,-11.73772853845175,1.4293884002469526]}
+,
+{"type":"Feature","properties":{"name":"Vermont","fips":"50","abbr":"VT","short":"Vt."},"geometry":{"type":"Point","coordinates":[16.945573657013547,7.587352765447046]},"bbox":[16.945573657013547,7.587352765447046,16.945573657013547,7.587352765447046]}
+,
+{"type":"Feature","properties":{"name":"Virginia","fips":"51","abbr":"VA","short":"Va."},"geometry":{"type":"Point","coordinates":[14.245804254283463,0.3021601789525078]},"bbox":[14.245804254283463,0.3021601789525078,14.245804254283463,0.3021601789525078]}
+,
+{"type":"Feature","properties":{"name":"Washington","fips":"53","abbr":"WA","short":"Wash."},"geometry":{"type":"Point","coordinates":[-16.027297128165987,10.778468115872723]},"bbox":[-16.027297128165987,10.778468115872723,-16.027297128165987,10.778468115872723]}
+,
+{"type":"Feature","properties":{"name":"West Virginia","fips":"54","abbr":"WV","short":"W. Va."},"geometry":{"type":"Point","coordinates":[12.113039059120732,0.7005052983639993]},"bbox":[12.113039059120732,0.7005052983639993,12.113039059120732,0.7005052983639993]}
+,
+{"type":"Feature","properties":{"name":"Wisconsin","fips":"55","abbr":"WI","short":"Wis."},"geometry":{"type":"Point","coordinates":[4.915283822439816,6.014280360055059]},"bbox":[4.915283822439816,6.014280360055059,4.915283822439816,6.014280360055059]}
+,
+{"type":"Feature","properties":{"name":"Wyoming","fips":"56","abbr":"WY","short":"Wyo."},"geometry":{"type":"Point","coordinates":[-8.631713487768222,4.928487242941945]},"bbox":[-8.631713487768222,4.928487242941945,-8.631713487768222,4.928487242941945]}
+,
+{"type":"Feature","properties":{"name":"North Carolina","fips":"37","abbr":"NC","short":"N.C."},"geometry":{"type":"Point","coordinates":[14.625282707365795,-2.0957550050074834]},"bbox":[14.625282707365795,-2.0957550050074834,14.625282707365795,-2.0957550050074834]}]}

@@ -2,11 +2,7 @@
 node_modules/
 
 # Build output
-dist/
-build/
 input/
-_output/
 
 # macOS
 .DS_Store
-
