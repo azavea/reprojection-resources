@@ -1,0 +1,87 @@
+#!/bin/bash
+
+PROJECT_DIR="$(dirname $(dirname $(realpath $0)) )"
+# Path to data input directory
+INPUT_DIR="$PROJECT_DIR/data/input/world"
+# Path to data output directory
+OUTPUT_DIR="$PROJECT_DIR/data/_reprojected"
+# Path to mbtiles output
+MBTILES_DIR="$OUTPUT_DIR/mbtiles"
+# Path to final tiles output
+TILES_DIR="$OUTPUT_DIR/tiles"
+# Projection type
+PROJECTION="twoPointEquidistantUsa"
+
+rm -r $OUTPUT_DIR
+mkdir $OUTPUT_DIR $MBTILES_DIR
+
+cat $INPUT_DIR/ne_10m_land.geojson | \
+  dirty-reproject --forward $PROJECTION > \
+  $OUTPUT_DIR/ne_10m_land.geojson
+
+cat $INPUT_DIR/ne_10m_admin_0_countries_points_major.geojson | \
+  dirty-reproject --forward $PROJECTION > \
+  $OUTPUT_DIR/ne_10m_admin_0_countries_points_major.geojson
+
+cat $INPUT_DIR/ne_10m_admin_0_countries.geojson | \
+  dirty-reproject --forward $PROJECTION > \
+  $OUTPUT_DIR/ne_10m_admin_0_countries.geojson
+
+cat $INPUT_DIR/ne_10m_admin_0_boundary_lines.geojson | \
+  dirty-reproject --forward $PROJECTION > \
+  $OUTPUT_DIR/ne_10m_admin_0_boundary_lines.geojson
+
+cat $INPUT_DIR/nuclear_powerplants_world.geojson | \
+  dirty-reproject --forward $PROJECTION > \
+  $OUTPUT_DIR/nuclear_powerplants_world.geojson
+
+tippecanoe -o $MBTILES_DIR/ne_10m_admin_0_countries_points_major.mbtiles \
+  --no-tile-size-limit \
+  --no-tile-compression \
+  -r1 \
+  --maximum-zoom=8 \
+  --minimum-zoom=0 \
+  $OUTPUT_DIR/ne_10m_admin_0_countries_points_major.geojson
+
+tippecanoe -o $MBTILES_DIR/nuclear_powerplants_world.mbtiles \
+  --no-tile-size-limit \
+  --no-tile-compression \
+  -r1 \
+  --maximum-zoom=8 \
+  --minimum-zoom=0 \
+  $OUTPUT_DIR/nuclear_powerplants_world.geojson
+
+tippecanoe -o $MBTILES_DIR/ne_10m_land.mbtiles \
+  --no-tile-size-limit \
+  --no-tile-compression \
+  --simplification=5 \
+  --maximum-zoom=8 \
+  --minimum-zoom=0 \
+  --simplify-only-low-zooms \
+  $OUTPUT_DIR/ne_10m_land.geojson
+
+tippecanoe -o $MBTILES_DIR/ne_10m_admin_0_countries.mbtiles \
+  --no-tile-size-limit \
+  --no-tile-compression \
+  --simplification=5 \
+  --maximum-zoom=8 \
+  --minimum-zoom=0 \
+  --simplify-only-low-zooms \
+  $OUTPUT_DIR/ne_10m_admin_0_countries.geojson
+
+tippecanoe -o $MBTILES_DIR/ne_10m_admin_0_boundary_lines.mbtiles \
+  --no-tile-size-limit \
+  --no-tile-compression \
+  --simplification=5 \
+  --maximum-zoom=8 \
+  --minimum-zoom=0 \
+  --simplify-only-low-zooms \
+  $OUTPUT_DIR/ne_10m_admin_0_boundary_lines.geojson
+
+# Merge multiple mbtiles into one
+tile-join -o $MBTILES_DIR/combined.mbtiles \
+  --no-tile-size-limit \
+  --no-tile-compression \
+  $MBTILES_DIR/ne_10m_admin_0_countries_points_major.mbtiles $MBTILES_DIR/nuclear_powerplants_world.mbtiles $MBTILES_DIR/ne_10m_land.mbtiles $MBTILES_DIR/ne_10m_admin_0_countries.mbtiles $MBTILES_DIR/ne_10m_admin_0_boundary_lines.mbtiles
+
+mb-util --image_format=pbf $MBTILES_DIR/combined.mbtiles $TILES_DIR
