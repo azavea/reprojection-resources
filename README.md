@@ -10,9 +10,9 @@ While working on Covid-19 related maps, I encountered situations where a differe
 
 ### Why?
 
-Mapbox GL JS, by default, uses the Web Mercator projection, as does most of the maps on the web. The Mercator projection, created in the 1500's was designed for navigation. It represents north as up and south as down, and angles are locally correct.
+Mapbox GL JS, by default, uses the Web Mercator projection, as does most of the maps on the web. The Mercator projection, created in the 1500's, was designed for navigation. It represents north as up and south as down, and angles are locally correct.
 
-Of course, most of the maps we make at Azavea are not intended for sailing around the world. Mercator distorts area, increasing the size of countries farther from the equator. A common example is that Greenland appears larger than Africa, while Africa is 14 times larger than Greenland.
+Of course, most of the maps we make at Azavea are not intended for sailing around the world. Mercator distorts area, increasing the size of countries farther from the equator. A common example is that Greenland appears larger than Africa, while in actuality Africa is 14 times larger than Greenland.
 
 Your choice of projections can impact issues of fairness and representation. It can support your narrative, allowing you to focus on a particular area of the world.
 
@@ -70,6 +70,10 @@ Run the test script
 
 Tiles will be generated at `data/_reprojected/tiles`. You can use these tiles in the visualization found at `visualizations/congressional`.
 
+## Mapbox native reprojection support
+
+As of Mapbox GL JS 2.6, you can now enable a variety of [map projections](https://docs.mapbox.com/mapbox-gl-js/example/projections/) out of the box. This is a great option if you are using Mapbox GL JS and if one of their options fits your use case. As of April 2022, the Albers USA is not available in Mapbox, so this library would continue to be useful for a US-centric map. Also, if you are making a map with MapLibre GL JS, this library would continue to be useful.
+
 ## Road Bumps
 
-If you run into an issue where the reprojection produces unexpected shapes that look like graticules or boundinb boxes, take a look at [this issue](https://github.com/developmentseed/dirty-reprojectors/issues/13). `dirty-reprojectors` seems to have an issue with [RFC 7946-compliant GeoJSON](https://github.com/developmentseed/dirty-reprojectors/issues/13#issuecomment-662715598).
+If you run into an issue where the reprojection produces unexpected shapes that look like graticules or bounding boxes, take a look at [this issue](https://github.com/developmentseed/dirty-reprojectors/issues/13). `dirty-reprojectors` seems to have an issue with [RFC 7946-compliant GeoJSON](https://github.com/developmentseed/dirty-reprojectors/issues/13#issuecomment-662715598).
